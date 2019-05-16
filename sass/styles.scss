@@ -1,0 +1,189 @@
+@import "grid";
+
+/////////////
+// BASE
+//reset CSS
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: orange;
+  font-size: 1.6rem;
+  font-family: "Open Sans";
+  color: #333;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.heading-secondary {
+  padding-bottom: 7%;
+}
+
+#contact .heading-secondary {
+  padding-bottom: 2rem;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  color: lightgrey;
+}
+
+
+//////////
+// LAYOUTS
+
+nav {
+  position: fixed;
+  background: #333;
+  width: 100%;
+}
+
+header {
+  background: linear-gradient(to right bottom, mediumseagreen, green);
+  min-height: 100vh;
+  display: flex;
+}
+
+#projects {
+  padding: 7% 15%;
+}
+
+#footer {
+  padding: 7% 15%;
+}
+
+/////////////
+//COMPONENTS
+
+.logo-box {
+  color: #fff;
+  padding: .8rem 2.2rem;
+}
+
+.navbar {
+  list-style: none;
+  display: none;
+  @media (min-width: 567px) {
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    padding: .8rem 2.2rem;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    -ms-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s;
+
+    &:hover {
+      color: mediumseagreen;
+    }
+  }
+}
+
+.project-tile {
+  border-radius: 25px;
+  margin: auto;
+  display: block;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .6);
+  transition: all .6s;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 .4rem 1rem 1rem rgba(0, 0, 0, .2);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .heading-tertiary {
+    text-align: center;
+    background: mediumseagreen;
+    padding: 1.2rem 0;
+    border-radius: 0 0 25px 25px;
+  }
+}
+
+#contact {
+  background: white;
+  padding: 7% 15%;
+}
+
+.contact-details {
+  margin: auto;
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    background: mediumseagreen;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    margin: 1rem;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+
+    &:hover {
+      -webkit-transform: translateY(-.8rem);
+      -moz-transform: translateY(-.8rem);
+      -ms-transform: translateY(-.8rem);
+      -o-transform: translateY(-.8rem);
+      transform: translateY(-.8rem);
+    }
+
+    &:active {
+      -webkit-transform: translateY(.4rem);
+      -moz-transform: translateY(.4rem);
+      -ms-transform: translateY(.4rem);
+      -o-transform: translateY(.4rem);
+      transform: translateY(.4rem);
+    }
+  }
+}
+
+
+///////////
+//UTILITIES
+
+.mb-xs {
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+}
