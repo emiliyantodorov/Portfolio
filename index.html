@@ -2,93 +2,222 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!--    CSS-->
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Emiliyan Todorov</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="column">
-<nav class="nav" id="navbar">
-    <div class="row align-center">
-        <div class="logo-box col-xs-12 col-sm-2">
-            LOGO
+<body>
+
+<header class="main-header column space-between">
+    <nav class="nav">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-sm-12 row space-between align-center col-md-2">
+                    <div class="mobile-menu-button">
+                        <div class="line line--top"></div>
+                        <div class="line line--center visible"></div>
+                        <div class="line line--bottom"></div>
+                    </div>
+                    <div class="logo-box">
+                        <img src="images/avatar-man-head-mind-think-512.png" alt="logo img">
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-10">
+                    <ul class="nav-bar mobile-nav-bar">
+                        <li class="nav-bar__item">
+                            <a href="#about-me" class="nav-bar__item--link">About me</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#skills" class="nav-bar__item--link">Skills</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#work" class="nav-bar__item--link">Work</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#contact" class="nav-bar__item--link">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <ul class="navbar col-xs-12 col-sm-6">
-            <li class="navbar__item">
-                <a href="#welcome-section" class="navbar__link">About</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#project-section" class="navbar__link">Work</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#contact" class="navbar__link">Contact</a>
-            </li>
-        </ul>
+    </nav>
+
+    <div class="heading-box center-content">
+        <h1 class="showcase__header-primary">I'm Emiliyan</h1>
+        <h2 class="showcase__header-2">a Front End Developer</h2>
+        <img src="images/91-912336_cartoon-transparent-cloud-png.png" alt="top-cloud" class="top-cloud">
+        <img src="images/91-912336_cartoon-transparent-cloud-png.png" alt="bottom-cloud" class="bottom-cloud">
     </div>
-</nav>
-<header class="header row justify-center align-center" id="welcome-section">
-    <div class="welcome-box">
-        <h1 class="heading-primary">
-            Hey I,m Emiliyan
-        </h1>
-        <p class="welcome-text text-centered">A web developer</p>
-    </div>
+
+    <figure class="mountain-photo">
+        <img src="images/pngkey.com-snow-mountain-png-1118124.png" alt="mountain" class="mountain">
+    </figure>
 </header>
 
-<main>
-    <section id="projects">
-        <h2 class="heading-secondary text-centered">
-            These are some of my projects...
-        </h2>
-        <div class="row">
-            <div class="col-xs-12 col-md-6 mb-xs">
-                <a href="#" class="project-tile" target="_blank">
-                    <img src="images/DocumentationPage.png" alt="Documentation photo">
-                    <h3 class="heading-tertiary">
-                        Documentation Page
-                    </h3>
-                </a>
+<main id="home">
 
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <a href="#" class="project-tile" target="_blank">
-                    <img src="images/ProductLandingPage.png" alt="Landing photo">
-                    <h3 class="heading-tertiary">
-                        Documentation Page
-                    </h3>
-                </a>
+    <section class="section-about" id="about-me">
+        <div class="container">
+            <div class="row justify-center">
+                <div class="about-box col-sm-12 col-md-10 col-lg-8">
+                    <div class="about-box__photo">
 
+                    </div>
+                    <h3 class="heading-tertiary about-box__heading">
+                        Hello.
+                    </h3>
+                    <p class="about-box__text">
+                        I am junior Front End Web Developer.
+                        Passionate about bringing web design to life with modern front end development technologies.
+                    </p>
+                </div>
             </div>
         </div>
 
     </section>
+    <hr>
+    <section class="section-skills" id="skills">
+        <h2 class="center-text">My Skills</h2>
+        <div class="container">
+            <div class="row justify-center">
+                <div class="col-sm-12 center-text">
+                    <h3 class="skills-header skills-header--first">HTML</h3>
+                </div>
+                <div class="progress-bar ">
+                    <span class="progress-bar--1">90%</span>
+                </div>
+                <div class="col-sm-12 center-text">
+                    <h3 class="skills-header">CSS</h3>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress-bar--2">85%</span>
+                </div>
+                <div class="col-sm-12 center-text">
+                    <h3 class="skills-header">SASS</h3>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress-bar--3">80%</span>
+                </div>
+                <div class="col-sm-12 center-text">
+                    <h3 class="skills-header">Javascript</h3>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress-bar--4">50%</span>
+                </div>
+                <div class="col-sm-12 center-text">
+                    <h3 class="skills-header">jQuery</h3>
+                </div>
+                <div class="progress-bar ">
+                    <span class="progress-bar--5">70%</span>
+                </div>
+                <div class="col-sm-12 center-text">
+                    <h3 class="skills-header">Bootstrap</h3>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress-bar--6">65%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="section-work" id="work">
+        <div class="container">
+            <h2 class="center-text">My Projects</h2>
+            <div class="row">
+                <div class="project col-lg-4 center-text">
+                    <a href="#" class="project__link">
+                        <figure class="project__link__box">
+                            <img src="images/diceGameSlogan.png" alt="">
+                            <figcaption class="project__link__box__text">
+                                The dice game
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="project col-lg-4 center-text">
+                    <a href="#" class="project__link">
+                        <figure class="project__link__box">
+                            <img src="images/goblinsSizeSlogan.png" alt="">
+                            <figcaption class="project__link__box__text">
+                                The Goblins Crew
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="project col-lg-4 center-text">
+                    <a href="#" class="project__link">
+                        <figure class="project__link__box">
+                            <img src="images/tinDogSlogan.png" alt="">
+                            <figcaption class="project__link__box__text">
+                                Tin dog site
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
 
-    <section id="contact" class=" row justify-center align-center">
-        <div class="center-box col-xs-12 text-centered">
-            <h2 class="heading-secondary">
-                Let's work together...
-            </h2>
+            </div>
         </div>
-        <div class="contact-details col-xs-12 row justify-center align-center">
-            <a href="#" class="facebook contact-link">
-                Facebook
-            </a>
-            <a href="https://github.com/emiliyantodorov" id="profile-link" class="twitter contact-link" target="_blank">
-                Github
-            </a>
-            <a href="#" class="email contact-link">
-                Email
-            </a>
-        </div>
+
 
     </section>
+    <hr>
+    <section class="contact" id="contact">
+        <h2 class="center-text">Contact Me</h2>
+        <ul>
+            <li>
+                <div class="center-text">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>: 0895101752</span>
+                </div>
+            </li>
+            <li>
+                <div class="center-text">
+                    <a href="mailto:emiliyantodorov@abv.bg" class="btn-message-me">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span>: MESSAGE ME</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="center-text">
+                    <a href="https://github.com/emiliyantodorov" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i>
+                        <span>: github.com/emiliyantodorov </span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="more-info">
+            <h4 class="more-info__heading">More Info</h4>
+            <ul>
+                <li>Name: Emiliyan Todorov</li>
+                <li>Date of Birth: 23/ February/ 1989</li>
+                <li>Nationality: Bulgarian</li>
+            </ul>
+        </div>
+    </section>
+
 </main>
 
-<footer id="footer">
-    <p class="text-centered">
-        &copy; Created for FreeCodeCamp
-    </p>
+<footer class="main-footer">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="center-text">
+                &copy; Copyright Emiliyan Todorov 2019
+                <a href="https://www.facebook.com/emilian.todorov.5" target="_blank" class="social-links">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </p>
+        </div>
+
+    </div>
 </footer>
+
 <!--SCRIPTS-->
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="JS/jquery-3.3.1.js"></script>
+<script src="JS/main.js"></script>
 </body>
 </html>

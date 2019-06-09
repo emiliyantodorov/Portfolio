@@ -1,0 +1,369 @@
+.mobile-menu-button {
+  width: 4rem;
+  display: none;
+  position: relative;
+  @media only screen and(max-width: 768px) {
+    display: block;
+    cursor: pointer;
+  }
+
+  .line {
+    height: .5rem;
+    background: $color-black;
+    border-radius: 3px;
+    transform-origin: center;
+    transition: all .4s;
+
+    &--top {
+      margin-bottom: 1.4rem;
+    }
+
+    //.animate-top-line {
+    //  transform: rotate(45deg);
+    //}
+
+    &--center {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: .9rem;
+    }
+
+    &--bottom {
+      //position: relative;
+      ////bottom: 0;
+    }
+
+    .animate-bottom-line {
+      margin: .7rem 0;
+    }
+  }
+
+
+}
+
+.logo-box {
+  width: 5rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.nav-bar {
+  list-style: none;
+  display: none;
+
+  //MOBILE NAV-BAR
+
+
+  @media only screen and(min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    margin: 0 2rem;
+    @media only screen and(max-width: 768px) {
+      padding: 1rem 0;
+    }
+
+    &--link {
+      &:link,
+      &:visited {
+        color: #01a3a4;
+        transition: all 1s;
+        position: relative;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2rem;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 20%;
+        background: #01a3a4;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: all .4s ease-out;
+        padding-top: 1rem;
+        //clip-path: polygon(100% 100%, 96% 0%, 4% 0%, 0% 100%);
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+
+//SHOWCASE COMPONENTS
+[class*=cloud] {
+  width: 15rem;
+  position: absolute;
+}
+
+.heading-box {
+  align-self: center;
+  text-align: center;
+  top: 40%;
+
+  .showcase__header-primary {
+    opacity: 0;
+    //margin-top: 9rem;
+    font-size: 7rem;
+    //font-family: "Kaushan Script";
+    font-family: "Great Vibes";
+    color: $color-primary;
+    -webkit-animation: moveFromBottomToTop .1 .1s 1s forwards;
+    -o-animation: moveFromBottomToTop 1.1s 1s forwards;
+    animation: moveFromBottomToTop 1.1s 1s forwards ease-out;
+  }
+
+  .showcase__header-2 {
+    opacity: 0;
+    font-family: "Kaushan Script";
+    text-transform: lowercase;
+    position: relative;
+    top: 3rem;
+    color: #00d2d3;
+    font-weight: normal;
+    -webkit-animation: moveFromBottomToTop .1 .1s 2s forwards;
+    -o-animation: moveFromBottomToTop 1.1s 2s forwards;
+    animation: moveFromBottomToTop 1.1s 2s forwards;
+  }
+}
+
+
+.btn-message-me {
+  display: inline-block;
+  background: $color-primary;
+  padding: 1rem 1.7rem;
+  margin-top: 2rem;
+  border-radius: 3px;
+  transition: all .4s;
+  color: #00d2d3;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: $color-black;
+}
+
+.social-links {
+  margin-left: 2rem;
+
+  a {
+
+  }
+
+  i {
+    font-size: 3rem;
+    color: #0abde3;
+    transition: color .4s;
+
+    &:hover {
+      color: #2e86de;
+    }
+  }
+
+}
+
+
+.top-cloud {
+  opacity: 0;
+  top: 0;
+  right: -18rem;
+  -webkit-animation: moveFromLeftToRight 1.1s 3s ease-out forwards;
+  -o-animation: moveFromLeftToRight 1.1s 3s ease-out forwards;
+  animation: moveFromLeftToRight 1.1s 3s ease-out forwards;
+}
+
+.bottom-cloud {
+  opacity: 0;
+  left: -15rem;
+  -webkit-animation: moveFromLeftToRight 1.1s 2.5s ease-out forwards;
+  -o-animation: moveFromLeftToRight 1.1s 2.5s ease-out forwards;
+  animation: moveFromLeftToRight 1.1s 2.5s ease-out forwards;
+}
+
+.mountain-photo {
+  width: 100%;
+  align-self: center;
+  @media only screen and(max-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    max-height: 29rem;
+    @media only screen and(max-width: 703px) {
+      max-height: 25rem;
+    }
+    @media only screen and(max-width: 663px) {
+      max-height: 20rem;
+    }
+  }
+
+}
+
+.about-box {
+  text-align: center;
+
+  &__photo {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url("../images/my-face.jpg") right center/cover no-repeat;
+  }
+
+  &__heading {
+    color: $color-primary;
+    padding: 2rem 0;
+    font-size: 2.7rem;
+  }
+
+  &__text {
+
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: .7rem dotted cornflowerblue;
+  width: 12%;
+  margin: 0 auto;
+}
+
+.skills-box {
+
+}
+
+.progress-bar {
+  box-shadow: inset 0 1px 3px rgba($color-black, .8);
+  background: rgba($color-black, .1);
+  padding: .4rem;
+  border-radius: 30px;
+  width: 50%;
+  font-size: 1.3rem;
+
+  span {
+    background: linear-gradient($color-blue, #0abde3);
+    width: 70%;
+    //border-right: 1px solid rgba(white, .4);
+    border-radius: 30px 0 0 30px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .progress-bar--1 {
+    width: 90%;
+  }
+
+  .progress-bar--2 {
+    width: 85%;
+  }
+
+  .progress-bar--3 {
+    width: 80%;
+  }
+
+  .progress-bar--4 {
+    width: 50%;
+  }
+
+  .progress-bar--5 {
+    width: 70%;
+  }
+
+  .progress-bar--6 {
+    width: 65%;
+  }
+}
+
+.project {
+
+  &__link {
+    position: relative;
+    display: block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      background: linear-gradient(rgba($color-black, .8), rgba($color-black, .8));
+      opacity: 0;
+      transition: opacity .6s;
+      border-radius: .7rem;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover .project__link__box__text {
+      opacity: 1;
+      top: 50%;
+    }
+
+    &:hover img {
+      transform: scale(1.5);
+    }
+
+    &__box {
+      overflow: hidden;
+      position: relative;
+      min-height: 18rem;
+      border-radius: .7rem;
+      img {
+        width: 100%;
+        transform: scale(1.7);
+        transition: all .6s;
+      }
+
+      &__text {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #ffffff;
+        z-index: 200;
+        opacity: 0;
+        transition: all .6s;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.more-info {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  .more-info__heading {
+    padding: 2rem 0;
+    color: $color-primary;
+  }
+
+  ul {
+
+  }
+}
+
