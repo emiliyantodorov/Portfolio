@@ -4,20 +4,19 @@
   //background: mediumseagreen;
   background: lighten(#48dbfb, 20%);
   height: 100vh;
+  padding-top: 3rem;
   width: 100%;
-
-
 }
 
 .nav {
   max-width: 120rem;
-  padding-top: 3rem;
+  padding: .5rem .5rem;
   //background: mediumseagreen;
   background: lighten(#48dbfb, 20%);
   //background: #48dbfb;
 
   //MOBILE NAV
-  @media only screen and(max-width: 768px) {
+  @media only screen and(max-width: 767px) {
     padding-top: 1rem;
     background: whitesmoke;
     position: fixed;
@@ -30,7 +29,7 @@
 
 #showcase {
   text-align: center;
-  //position: relative;
+
   @media only screen and(max-width: 768px) {
     margin-top: 9rem;
   }

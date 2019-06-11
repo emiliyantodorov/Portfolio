@@ -9,7 +9,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   color: #576574;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans", sans-serif; }
 
 body {
   font-size: 1.7rem;
@@ -494,13 +494,14 @@ section {
   position: relative;
   background: #aceffd;
   height: 100vh;
+  padding-top: 3rem;
   width: 100%; }
 
 .nav {
   max-width: 120rem;
-  padding-top: 3rem;
+  padding: .5rem .5rem;
   background: #aceffd; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     .nav {
       padding-top: 1rem;
       background: whitesmoke;
@@ -534,7 +535,7 @@ footer {
   width: 4rem;
   display: none;
   position: relative; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     .mobile-menu-button {
       display: block;
       cursor: pointer; } }
@@ -555,7 +556,15 @@ footer {
       margin: .7rem 0; }
 
 .logo-box {
-  width: 5rem; }
+  width: 5rem;
+  transition: all 1s;
+  position: relative; }
+  .logo-box::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute; }
   .logo-box img {
     width: 100%; }
 
@@ -598,11 +607,12 @@ footer {
 .heading-box {
   align-self: center;
   text-align: center;
-  top: 40%; }
+  top: 40%;
+  z-index: 20; }
   .heading-box .showcase__header-primary {
     opacity: 0;
     font-size: 7rem;
-    font-family: "Great Vibes";
+    font-family: 'Great Vibes', cursive;
     color: #01a3a4;
     -webkit-animation: moveFromBottomToTop .1 .1s 1s forwards;
     -o-animation: moveFromBottomToTop 1.1s 1s forwards;
@@ -630,7 +640,7 @@ footer {
   .btn-message-me:hover {
     background: #017171; }
 
-.github-link {
+.github-link, .free-code-camp-link {
   display: inline-block;
   margin-top: 2rem;
   color: #576574; }
@@ -692,7 +702,7 @@ footer {
 
 hr {
   border: none;
-  border-bottom: .7rem dotted cornflowerblue;
+  border-bottom: 0.7rem dotted #48dbfb;
   width: 12%;
   margin: 0 auto; }
 
@@ -722,6 +732,9 @@ hr {
   .progress-bar .progress-bar--6 {
     width: 65%; }
 
+@media (max-width: 767px) {
+  .project:not(:last-child) {
+    padding-bottom: 2rem; } }
 .project__link {
   position: relative;
   display: block; }
@@ -744,16 +757,15 @@ hr {
     opacity: 1;
     top: 50%; }
   .project__link:hover img {
-    transform: scale(1.5); }
+    transform: scale(1.3); }
   .project__link__box {
     overflow: hidden;
-    position: relative;
-    min-height: 18rem;
     border-radius: .7rem; }
     .project__link__box img {
       width: 100%;
-      transform: scale(1.7);
-      transition: all .6s; }
+      transform: scale(1);
+      transition: all .6s;
+      border-radius: .7rem; }
     .project__link__box__text {
       position: absolute;
       top: 70%;
@@ -772,5 +784,15 @@ hr {
   .more-info .more-info__heading {
     padding: 2rem 0;
     color: #01a3a4; }
+
+.add-fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000; }
+
+.block-element {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@
   width: 4rem;
   display: none;
   position: relative;
-  @media only screen and(max-width: 768px) {
+  @media only screen and(max-width: 767px) {
     display: block;
     cursor: pointer;
   }
@@ -17,10 +17,6 @@
     &--top {
       margin-bottom: 1.4rem;
     }
-
-    //.animate-top-line {
-    //  transform: rotate(45deg);
-    //}
 
     &--center {
       position: absolute;
@@ -44,6 +40,16 @@
 
 .logo-box {
   width: 5rem;
+  transition: all 1s;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
 
   img {
     width: 100%;
@@ -53,7 +59,6 @@
 .nav-bar {
   list-style: none;
   display: none;
-
   //MOBILE NAV-BAR
 
 
@@ -110,13 +115,14 @@
   align-self: center;
   text-align: center;
   top: 40%;
+  z-index: 20;
 
   .showcase__header-primary {
     opacity: 0;
     //margin-top: 9rem;
     font-size: 7rem;
     //font-family: "Kaushan Script";
-    font-family: "Great Vibes";
+    font-family: 'Great Vibes', cursive;;
     color: $color-primary;
     -webkit-animation: moveFromBottomToTop .1 .1s 1s forwards;
     -o-animation: moveFromBottomToTop 1.1s 1s forwards;
@@ -152,7 +158,7 @@
   }
 }
 
-.github-link {
+.github-link, .free-code-camp-link {
   display: inline-block;
   margin-top: 2rem;
   color: $color-black;
@@ -241,7 +247,7 @@
 
 hr {
   border: none;
-  border-bottom: .7rem dotted cornflowerblue;
+  border-bottom: .7rem dotted $color-blue;
   width: 12%;
   margin: 0 auto;
 }
@@ -293,6 +299,11 @@ hr {
 }
 
 .project {
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      padding-bottom: 2rem;
+    }
+  }
 
   &__link {
     position: relative;
@@ -323,18 +334,20 @@ hr {
     }
 
     &:hover img {
-      transform: scale(1.5);
+      transform: scale(1.3);
     }
 
     &__box {
       overflow: hidden;
-      position: relative;
-      min-height: 18rem;
+      //position: relative;
+      //min-height: 18rem;
       border-radius: .7rem;
+
       img {
         width: 100%;
-        transform: scale(1.7);
+        transform: scale(1);
         transition: all .6s;
+        border-radius: .7rem;
       }
 
       &__text {
@@ -367,3 +380,15 @@ hr {
   }
 }
 
+.add-fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+}
+
+//UTILITIES
+.block-element {
+  display: block;
+}

@@ -52,12 +52,35 @@ function start() {
     });
 
     //Sliding to section on link click
-    let allLiks = $(".nav-bar__item--link");
+    let allLinks = $(".js-nav-bar__item--link");
+    console.log(allLinks);
+    allLinks.on("click", function (evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
 
-    allLiks.on("click", function (evt) {
         let targetElement = $(evt.target).attr("href");
+        // console.log(targetElement);
         let targetPosition = $(targetElement).offset().top;
 
         $("html, body").animate({scrollTop: targetPosition}, "slow");
-    })
+    });
+
+//
+    const aboutMeSectionEl = $("#about-me");
+    const aboutMeSectionElTopPossition = aboutMeSectionEl.offset().top;
+
+    $(window).on("scroll", fixedNav);
+    //
+    function fixedNav() {
+
+        const body = $("body");
+
+        if ($(window).scrollTop() >= aboutMeSectionElTopPossition) {
+            
+            $("nav").addClass("add-fixed-nav");
+            
+        }  else {
+            $("nav").removeClass("add-fixed-nav");
+        }
+    }
 }
